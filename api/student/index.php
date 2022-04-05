@@ -13,6 +13,11 @@
         } else {
             index($conn);
         }
+
+        // if ($_SERVER['QUERY_STRING']) {
+        //     echo $_GET['id'];
+        // }
+
     } else if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         if ($body) {
             create($body, $conn);
@@ -31,7 +36,6 @@
         } else {
             echo json_encode(['DELETE' => 'ID is null']);
         }
-
     } else {
         echo json_encode(['ERROR' => 'Error']);
     }
