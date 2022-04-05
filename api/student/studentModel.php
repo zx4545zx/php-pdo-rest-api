@@ -1,9 +1,4 @@
 <?php
-    header('Access-Control-Allow-Origin: *');
-    header('Content-Type: application/json; charset=UTF-8');
-
-    include_once $_SERVER['DOCUMENT_ROOT']. '/php-rest-api/api/config/config.php';
-
     function getAllStudent($conn) {
         $sql = "SELECT * FROM Student";
         $statement = $conn->prepare($sql);
