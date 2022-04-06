@@ -14,8 +14,10 @@
             index($conn);
         }
 
-        // if ($_SERVER['QUERY_STRING']) {
-        //     echo $_GET['id'];
+        // if (isset($_GET["id"])) {
+        //     echo json_encode(["id" => $_GET["id"]]);
+        // } else {
+        //     echo json_encode(["hello" => "world"]);
         // }
 
     } else if ($_SERVER["REQUEST_METHOD"] == 'POST') {
